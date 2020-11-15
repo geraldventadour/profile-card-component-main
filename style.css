@@ -1,0 +1,183 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125rem;
+  overflow: hidden;
+
+  /* background: url("./images/bg-pattern-top.svg") top -31.8125rem left -17.875rem
+      no-repeat,
+    url("./images/bg-pattern-bottom.svg") bottom -39.5rem right -14.375rem
+      no-repeat,
+    hsl(185, 75%, 39%); */
+  /* 
+  background: url("./images/bg-pattern-top.svg") bottom -70.6944% left -19.8611%
+      no-repeat,
+    url("./images/bg-pattern-bottom.svg") bottom -39.5rem right -14.375rem
+      no-repeat,
+    hsl(185, 75%, 39%); */
+  background: hsl(185, 75%, 39%);
+  /* background: hsl(195, 91%, 37%); */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: -1;
+  background: url("./images/bg-pattern-top.svg") no-repeat;
+  background-size: contain;
+  width: 622px;
+  height: 621px;
+  right: 163px;
+  bottom: 401px;
+
+  /* width: 978px;
+  height: 976px;
+  right: 740px;
+  bottom: 253px; */
+}
+
+body::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  background: url("./images/bg-pattern-bottom.svg") no-repeat;
+  background-size: contain;
+  width: 622px;
+  height: 621px;
+  top: 357px;
+  left: 165px;
+
+  /* width: 978px;
+  height: 976px;
+  top: 376px;
+  left: 692px; */
+}
+
+@media (min-width: 500px) {
+  body::before {
+    width: 978px;
+    height: 976px;
+    right: 740px;
+    bottom: 253px;
+  }
+  body::after {
+    width: 978px;
+    height: 976px;
+    top: 376px;
+    left: 692px;
+  }
+}
+
+.container {
+  width: min(86.9333%, 350px);
+  background-color: white;
+  border-radius: 15px;
+}
+
+.user-infos {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px hsl(228, 9%, 92%);
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.name,
+li > p {
+  color: hsl(228, 23%, 23%);
+  font-weight: bold;
+}
+
+p > span,
+.city {
+  color: hsl(227, 10%, 46%);
+}
+
+.user-infos {
+  background: url("./images/bg-pattern-card.svg") no-repeat;
+}
+
+.user-infos::before {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: url("./images/image-victor.jpg");
+  margin-top: 5.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.age {
+  margin-left: 0.53125rem;
+  font-weight: 400;
+}
+.city {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+ul {
+  padding: 1.5rem;
+  margin: 0;
+  width: 249px;
+  margin: auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  /* flex-wrap: wrap; */
+}
+
+li {
+  text-align: center;
+}
+
+li span {
+  display: block;
+  font-size: 0.625rem;
+  margin-top: 0.5625rem;
+  font-weight: 400;
+}
